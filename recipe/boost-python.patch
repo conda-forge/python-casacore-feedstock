@@ -1,12 +1,12 @@
---- a/setup.py	2017-06-02 17:50:31.048245468 -0400
-+++ b/setup.py	2017-06-02 18:06:24.724913541 -0400
-@@ -62,9 +62,7 @@
-     return boost_python
+--- a/setup.py
++++ b/setup.py
+@@ -59,9 +59,7 @@
+     return None
  
  
 -boost_python = find_boost()
--if not find_library(boost_python):
--    raise Exception("can't find boost library")
+-if not boost_python:
+-    warnings.warn("Could not find a boost library")
 +boost_python = 'boost_python'
  
  
