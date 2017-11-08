@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "2.1.2" %}
-{% set sha256 = "b4ea03d1b3d72ddfa67c2b4b572dd92f39f806b090c49b4715f982ac9ecba2b1" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "b73477a6b78a3ae610ed12bcffd1582fd30ba502df0e9ca8a683999850776efe" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - boost-python.patch
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: true
   skip: true  # [win]
 
@@ -22,16 +22,16 @@ requirements:
   build:
     - toolchain
     - gcc  # [osx]
-    - boost 1.63.*  # note this is intentionally NOT the latest version; synced with casacore which has special needs
-    - casacore 2.2.*
+    - boost 1.65.1
+    - casacore 2.4.*
     - numpy 1.7.*  # [py27]
     - numpy 1.9.*  # [py35]
     - numpy 1.11.*  # [py36]
     - python
     - setuptools
   run:
-    - boost 1.63.*  # note this is intentionally NOT the latest version; synced with casacore which has special needs
-    - casacore 2.2.*
+    - boost 1.65.1
+    - casacore 2.4.*
     - numpy >=1.7  # [py27]
     - numpy >=1.9  # [py35]
     - numpy >=1.11  # [py36]
