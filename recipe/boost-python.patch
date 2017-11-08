@@ -1,13 +1,11 @@
 --- a/setup.py
 +++ b/setup.py
-@@ -59,9 +59,7 @@
-     return None
+@@ -47,7 +47,7 @@
  
- 
--boost_python = find_boost()
--if not boost_python:
--    warnings.warn("Could not find a boost library")
-+boost_python = 'boost_python'
- 
- 
- extension_metas = (
+ def find_boost():
+     """Find the name of the boost-python library. Returns None if none is found."""
+-    boostlibnames = ['boost_python-py%s%s' % (sys.version_info[0], sys.version_info[1])]
++    boostlibnames = ['boost_python%s' % sys.version_info[0]]
+     boostlibnames += ['boost_python']
+     if sys.version_info[0] == 2:
+         boostlibnames += ["boost_python-mt"]
