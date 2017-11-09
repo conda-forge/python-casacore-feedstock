@@ -1,13 +1,11 @@
---- a/setup.py	2017-06-02 17:50:31.048245468 -0400
-+++ b/setup.py	2017-06-02 18:06:24.724913541 -0400
-@@ -62,9 +62,7 @@
-     return boost_python
+--- a/setup.py
++++ b/setup.py
+@@ -47,7 +47,7 @@
  
- 
--boost_python = find_boost()
--if not find_library(boost_python):
--    raise Exception("can't find boost library")
-+boost_python = 'boost_python'
- 
- 
- extension_metas = (
+ def find_boost():
+     """Find the name of the boost-python library. Returns None if none is found."""
+-    boostlibnames = ['boost_python-py%s%s' % (sys.version_info[0], sys.version_info[1])]
++    boostlibnames = ['boost_python%s' % sys.version_info[0]]
+     boostlibnames += ['boost_python']
+     if sys.version_info[0] == 2:
+         boostlibnames += ["boost_python-mt"]
