@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "b73477a6b78a3ae610ed12bcffd1582fd30ba502df0e9ca8a683999850776efe" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "76075aa4add4f18b29d474ea3e155bce2d0688ed247ca1ce91a8106f08377bc5" %}
 
 package:
   name: {{ name|lower }}
@@ -22,17 +22,17 @@ requirements:
   build:
     - toolchain
     - gcc  # [osx]
-    - boost 1.65.1
+    - boost 1.66.0
     - casacore 2.4.*
-    - numpy 1.7.*  # [py27]
+    - numpy 1.8.*  # [py27]
     - numpy 1.9.*  # [py35]
     - numpy 1.11.*  # [py36]
     - python
     - setuptools
   run:
-    - boost 1.65.1
+    - boost 1.66.0
     - casacore 2.4.*
-    - numpy >=1.7  # [py27]
+    - numpy >=1.8  # [py27]
     - numpy >=1.9  # [py35]
     - numpy >=1.11  # [py36]
     - python
