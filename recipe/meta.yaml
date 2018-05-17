@@ -14,7 +14,7 @@ source:
     - boost-python.patch
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   skip: true  # [win]
 
@@ -22,7 +22,7 @@ requirements:
   build:
     - toolchain
     - gcc  # [osx]
-    - boost 1.66.0
+    - boost 1.67.0
     - casacore 2.4.*
     - numpy 1.8.*  # [py27]
     - numpy 1.9.*  # [py35]
@@ -30,7 +30,7 @@ requirements:
     - python
     - setuptools
   run:
-    - boost 1.66.0
+    - boost 1.67.0
     - casacore 2.4.*
     - numpy >=1.8  # [py27]
     - numpy >=1.9  # [py35]
