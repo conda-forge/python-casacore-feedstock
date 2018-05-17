@@ -5,4 +5,4 @@ IFS=$' \t\n' # workaround for conda 4.2.13+toolchain bug
 
 export CFLAGS="-I$PREFIX/include"
 
-exec python setup.py install --single-version-externally-managed --record record.txt
+exec python -m pip install --no-deps --ignore-installed .
