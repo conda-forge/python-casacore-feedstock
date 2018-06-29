@@ -14,27 +14,28 @@ source:
     - boost-python.patch
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   skip: true  # [win]
 
 requirements:
   build:
-    - toolchain
-    - gcc  # [osx]
-    - boost 1.66.0
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - boost
     - casacore 2.4.*
-    - numpy 1.8.*  # [py27]
-    - numpy 1.9.*  # [py35]
-    - numpy 1.11.*  # [py36]
+    - numpy        # [py27]
+    - numpy        # [py35]
+    - numpy         # [py36]
     - python
     - setuptools
   run:
-    - boost 1.66.0
+    - boost
     - casacore 2.4.*
-    - numpy >=1.8  # [py27]
-    - numpy >=1.9  # [py35]
-    - numpy >=1.11  # [py36]
+    - {{ pin_compatible('numpy') }}   # [py27]
+    - {{ pin_compatible('numpy') }}   # [py35]
+    - {{ pin_compatible('numpy') }}   # [py36]
     - python
 
 test:
