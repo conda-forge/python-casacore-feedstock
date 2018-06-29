@@ -14,14 +14,16 @@ Summary: Python bindings for casacore, a library used in radio astronomy
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-casacore-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-casacore-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-casacore-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-casacore-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-casacore-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-casacore-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/python-casacore-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-casacore-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-casacore/badges/version.svg)](https://anaconda.org/conda-forge/python-casacore)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-casacore/badges/downloads.svg)](https://anaconda.org/conda-forge/python-casacore)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--casacore-green.svg)](https://anaconda.org/conda-forge/python-casacore) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-casacore.svg)](https://anaconda.org/conda-forge/python-casacore) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-casacore.svg)](https://anaconda.org/conda-forge/python-casacore) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-casacore.svg)](https://anaconda.org/conda-forge/python-casacore) |
 
 Installing python-casacore
 ==========================
