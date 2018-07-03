@@ -24,18 +24,14 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - boost
-    - casacore 2.4.*
-    - numpy        # [py27]
-    - numpy        # [py35]
-    - numpy         # [py36]
+    - casacore >=2.4.*
+    - numpy
     - python
     - setuptools
   run:
     - boost
-    - casacore 2.4.*
-    - {{ pin_compatible('numpy') }}   # [py27]
-    - {{ pin_compatible('numpy') }}   # [py35]
-    - {{ pin_compatible('numpy') }}   # [py36]
+    - casacore >=2.4.*
+    - {{ pin_compatible('numpy') }}
     - python
 
 test:
