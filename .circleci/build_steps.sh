@@ -21,6 +21,9 @@ CONDARC
 
 conda install --yes --quiet conda-forge::conda-forge-ci-setup=2 conda-build
 
+# Intentionally temporary hack, CI setup currently breaks git:
+conda update --yes git
+
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
