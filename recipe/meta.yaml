@@ -23,6 +23,7 @@ requirements:
     - boost
     - casacore >=3.2.*
     - numpy
+    - pip
     - python
     - setuptools
   run:
@@ -38,8 +39,8 @@ test:
 
 about:
   home: http://casacore.github.io/python-casacore/
-  license: GPLv2
-  license_file: LICENSE
+  license: GPL-2.0-or-later
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   summary: 'Python bindings for casacore, a library used in radio astronomy'
 
 extra:
