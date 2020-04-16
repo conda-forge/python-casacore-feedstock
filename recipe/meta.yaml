@@ -1,22 +1,19 @@
 {% set name = "python-casacore" %}
-{% set version = "2.2.1" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "d48e6202831ef22983961aa14c82294325f71b2fd3e108efaa3c1ca99b7505b5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  #url: https://github.com/casacore/{{ name }}/archive/v{{ version }}.tar.gz
-  #sha256: 76075aa4add4f18b29d474ea3e155bce2d0688ed247ca1ce91a8106f08377bc5
-  git_url: https://github.com/casacore/python-casacore.git
-  git_rev: 4a1a1c1c3f601f4854c1fe859d8e50d6a5ad02ca
-  patches:
-    - boost-python.patch
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 1005
-  detect_binary_files_with_prefix: true
+  number: 0
   skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -24,13 +21,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - boost
-    - casacore >=2.4.*
+    - casacore >=3.2.*
     - numpy
     - python
     - setuptools
   run:
-    - boost
-    - casacore >=2.4.*
     - {{ pin_compatible('numpy') }}
     - python
 
