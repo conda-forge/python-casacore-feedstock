@@ -3,7 +3,7 @@ About python-casacore
 
 Home: http://casacore.github.io/python-casacore/
 
-Package license: GPLv2
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
