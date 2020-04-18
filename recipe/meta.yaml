@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "d48e6202831ef22983961aa14c82294325f71b2fd3e108efaa3c1ca99b7505b5" %}
+{% set version = "3.3.0" %}
+{% set sha256 = "e682940c50e6dbeb4e4a3301e3e15cd89774ce6849dfc1b6602b6663c058213b" %}
 
 package:
   name: {{ name|lower }}
@@ -41,7 +41,7 @@ about:
   home: http://casacore.github.io/python-casacore/
   license: GPL-2.0-or-later
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
-  summary: 'Python bindings for casacore, a library used in radio astronomy'
+  summary: Python bindings for casacore, a library used in radio astronomy
 
 extra:
   recipe-maintainers:
