@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,6 +27,7 @@ requirements:
     - python
     - setuptools
   run:
+    - {{ pin_compatible('boost') }}
     - {{ pin_compatible('numpy') }}
     - python
 
