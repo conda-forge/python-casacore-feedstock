@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,6 +30,7 @@ requirements:
     - {{ pin_compatible('boost') }}
     - {{ pin_compatible('numpy') }}
     - python
+    - six
 
 test:
   imports:
