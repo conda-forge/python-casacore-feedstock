@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "3.3.1" %}
-{% set sha256 = "c1f196b87ea34f930da6900eebc0a8f39291352d4def6631a2ec148ef5cf083a" %}
+{% set version = "3.4.0" %}
+{% set sha256 = "f654781292308de70c037981f5f7f5aeb02cf980a6f1367d1c294e7b4fca42ce" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -36,8 +36,6 @@ test:
   imports:
     - casacore
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://casacore.github.io/python-casacore/
