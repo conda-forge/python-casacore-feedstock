@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "3.5.0" %}
-{% set sha256 = "47ac85d47051074d64415414212c8c2cfcb49a2037f5c3d78f71ab5b162d1e8b" %}
+{% set version = "3.5.1" %}
+{% set sha256 = "a577233c7311f64a8048180ee82d6946fee16e0dce2976eb516784a32d8b9133" %}
 
 package:
   name: {{ name|lower }}
