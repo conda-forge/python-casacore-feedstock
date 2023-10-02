@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,14 +23,13 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost
+    - libboost-python-devel
     - casacore >=3.2.*
     - numpy
     - pip
     - python
     - setuptools
   run:
-    - {{ pin_compatible('boost') }}
     - {{ pin_compatible('numpy') }}
     - python
     - six
