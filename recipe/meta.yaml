@@ -1,17 +1,17 @@
 {% set name = "python-casacore" %}
-{% set version = "3.5.2" %}
-{% set sha256 = "ad70c8e08893eec928b3e38c099bda8863f5aa9d099fd00694ad2b0d48eba08f" %}
+{% set version = "3.6.1" %}
+{% set sha256 = "ddc1ac186b6ea2636ac6a271568de52f485ebf6f21d9d00a4216fc3a1651bb81" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace("-", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 6
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,15 +21,19 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
+    - cmake
+    - make
   host:
     - libboost-python-devel
-    - casacore >=3.2.*
+    - casacore >=3.6.*
     - numpy
     - pip
     - python
+    - scikit-build-core
     - setuptools
+    - setuptools_scm
   run:
     - python
     - six
