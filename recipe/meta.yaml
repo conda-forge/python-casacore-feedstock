@@ -1,17 +1,17 @@
 {% set name = "python-casacore" %}
-{% set version = "3.6.1" %}
-{% set sha256 = "ddc1ac186b6ea2636ac6a271568de52f485ebf6f21d9d00a4216fc3a1651bb81" %}
+{% set version = "3.7.1" %}
+{% set sha256 = "6c4e060cba73c0ab9d944eb4b6aa97f20c12b761e671587f313bfc59e3a775c3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace("-", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
