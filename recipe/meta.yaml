@@ -1,6 +1,6 @@
 {% set name = "python-casacore" %}
-{% set version = "3.7.1" %}
-{% set sha256 = "6c4e060cba73c0ab9d944eb4b6aa97f20c12b761e671587f313bfc59e3a775c3" %}
+{% set version = "3.8.1" %}
+{% set sha256 = "757763cbf5bcb8e98b6809308de107bcb9b41982779b17f163ef20ca0ec18322" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
